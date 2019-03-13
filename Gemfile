@@ -12,6 +12,8 @@ gem 'puma', '~> 3.11'
 gem 'watir'
 gem 'csv'
 gem 'dotenv'
+gem 'delayed_job_active_record'
+gem 'sidekiq'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

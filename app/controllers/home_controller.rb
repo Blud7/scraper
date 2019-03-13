@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-  	@jobs = SearchJobs.new(@firms).perform
+  	@jobs = SearchJobs.new(@firms).delay.perform
   end
 
 
