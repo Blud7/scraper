@@ -1,11 +1,11 @@
 class HomeController < ApplicationController
   def index
-  	@jobs = SearchJobs.new(@firms).delay.perform
+  	@jobs = SearchJobs.new(@firms).perform
   end
 
 
   def show
-  	@jobs = SearchJobs.new(@firms).perform #ici, je démarre mon scraper
+  	@jobs = SearchJobs.new(@firms).perform #démarrage du scraper
 
   	ex_json = File.read('public/temp.json') #je lis l'ancien json du scrap précédent
 	@ex_hash = JSON.parse(ex_json) # je parse le fichier pour utiliser les anciennes données
